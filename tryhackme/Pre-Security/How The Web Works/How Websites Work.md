@@ -28,19 +28,21 @@
         <p> element defines a paragraph
     
     Within TryHackMe, this code was used to show the correcting of file extensions to render an image to reveal the question tags.
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <title>TryHackMe HTML Editor</title>
-                </head>
-                <body>
-                    <h1>Cat Website!</h1>
-                    <p>See images of all my cats!</p>
-                    <img src='img/cat-1.jpg'>
-                    <img src='img/cat-2.jpg'>
-                    <img src='img/dog-1.png'>
-                </body>
-            </html>
+         ```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TryHackMe HTML Editor</title>
+  </head>
+  <body>
+    <h1>Cat Website!</h1>
+    <p>See images of all my cats!</p>
+    <img src=>
+    <img src=>
+    <img src=>
+  </body>
+</html>
+
 
 - Task 3 `JavaScript`
     JavaScript (JS) is one tof the most popular coding languages in the world, allowing webpages to become interactive.
