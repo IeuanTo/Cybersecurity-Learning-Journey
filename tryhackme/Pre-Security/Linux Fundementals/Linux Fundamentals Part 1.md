@@ -16,7 +16,7 @@ There are a few commands useful in the navigating the filesystem such as ls for 
 - Task 6; Searching for files
 We can use find command to look for files that we know exist, or that have a certain file extension. Grep is used to look through contenets of files and find specific values. 
 
--Task 7; An Introduction to Shell Operators
+- Task 7; An Introduction to Shell Operators
 There are a lot of operators that are useful in Linux that allow us to do a few extra things. 
 & allows commands to be executed in the background, allowing us to continue working. && allows us to connect commands together. 
 com1 && com2, note that com2 will only run if com1 is successful. ">" is used to redirect commands. echo hey > welcome will create a file called welcome, with the contents of hey. 
