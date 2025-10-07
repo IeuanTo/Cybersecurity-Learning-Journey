@@ -7,6 +7,8 @@
 ---
 
 ## 🧠 Notes
+- Task 1,2,3 were introductions
+
 - Task 4; Running your firsdt few commands
 Began by starting with simple commands to get used to the CLI. echo, whoami. when using echo, a single word can be outside the "".      However, once the string is longer, it must be encased in "".
 
