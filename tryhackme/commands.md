@@ -29,4 +29,17 @@
 - file ; determine the type of file
 - su ; switch users
 ## Linux Fundamentals 3
--
+- nano ; text file editor
+    nano + "filename" ; will creat a text file
+- vim ; an advanced text editor
+- wget ; download files
+- scp ; transfer files between machines
+- ps ; show running processes
+    ps -aux ; shows all running processes by other users
+- top ; real time statistics on process
+- kill ; end a task
+    SIGTERM ; kill a process with some cleanup
+    SIGKILL ; kill a process with no cleanup
+    SIGSTOP ; stop or suspend a process
+- systemctl ; start, stop, enable and disable processes : example systemctl [option] [service]
+- fg ; beings a process to the foreground
