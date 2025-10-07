@@ -18,7 +18,7 @@
     HTML is used to build and define structure
     CSS is used to make websites palatable and nice to look at
     JavaScript is used for complex setting and interactivity
-    
+    ```
     HTML is madeup of elements, or tags, and tells browsers how to display content.
         <!DOCTYPE html> defines that the page is a HTML5 document
         <html> element is the root element of the HTML page - all other elements come after this element
@@ -28,20 +28,21 @@
         <p> element defines a paragraph
     
     Within TryHackMe, this code was used to show the correcting of file extensions to render an image to reveal the question tags.
-         ```html
+```
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TryHackMe HTML Editor</title>
-  </head>
-  <body>
-    <h1>Cat Website!</h1>
-    <p>See images of all my cats!</p>
-    <img src=>
-    <img src=>
-    <img src=>
-  </body>
+<head>
+<title>TryHackMe HTML Editor</title>
+</head>
+<body>
+<h1>Cat Website!</h1>
+<p>See images of all my cats!</p>
+<img src=>
+<img src=>
+<img src=>
+</body>
 </html>
+```
 
 
 - Task 3 `JavaScript`
