@@ -1,0 +1,64 @@
+# TryHackMe: [Active Directory Basics]
+
+**Date Started:** 2025-10-11  
+**Module Pathway:** Cyber Secrurity 101 
+**Objective:** [Learning Active Directory Basics]
+
+---
+
+## 🧠 Notes
+- Task 1 ; Introduction to module
+
+- Task 2 ; Windows Domain
+A Windows Domain is a group of computers and users that are connected together for centralized managment. One important part of a windows domain is Active Directory, which is run on a Domain Controller (DC). 
+The use of Active Direcoty allows for centralised identity managemnt, allowing for any computer around a campus (like a uni) to be accessesable to anyone on the domain.
+It also allows the managin of secuirty policies for multiple groups in the organisation. 
+
+- Task 3 ; Active Directory (AD)
+AD allows segmenting a domain or network into sections, such as USers, Computers, and groups.
+Users represent people or accounts at an individual level.
+Machines are computers that are connected to the domain, allwoing secuirty policies and groups to be applied to any user that logs in on the machine.
+Security Groups are bundles of users or machines with specific rules to that group.
+
+- Task 7 ; Authentication
+Kerberos  is the default authentication on recent Windows versions. 
+Login (AS Exchange) – User → KDC: sends username + timestamp (encrypted with password key).
+KDC → User: returns TGT (encrypted with krbtgt hash) + Session Key.
+
+Request Service (TGS Exchange) – User → KDC: sends TGT, timestamp (using Session Key), + SPN.
+KDC → User: returns TGS (encrypted with service account hash) + Service Session Key.
+
+Access Service (AP Exchange) – User → Service: sends TGS.
+Service: decrypts it, validates the Service Session Key, grants access.
+
+NetNTLM - 
+Step 1: Client sends an authentication request to the target server.
+
+Step 2: Server generates a random challenge and sends it to the client.
+
+Step 3: Client uses their NTLM password hash + the challenge (and other data) to create a response, then sends it back to the server.
+
+Step 4: Server forwards both the challenge and response to the Domain Controller (DC).
+
+Step 5: DC recalculates the expected response using the stored password hash and compares it with the client’s response.
+
+If they match → authentication succeeds.
+If not → access denied.
+
+Step 6: Server relays the authentication result from the DC back to the client.
+
+## Acronyms
+| Acronym          | Full Term                               | Description                                                                                  |
+| ---------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **AD**           | Active Directory                        | Directory service for managing users, computers, and policies in a Windows Domain            |
+| **DC**           | Domain Controller                       | Server that runs Active Directory and handles authentication and directory services          |
+| **KDC**          | Key Distribution Center                 | Service that issues Kerberos tickets (TGT and TGS)                                           |
+| **TGT**          | Ticket Granting Ticket                  | Ticket that allows users to request access to other services without re-entering credentials |
+| **TGS**          | Ticket Granting Service                 | Ticket for accessing a specific network service                                              |
+| **SPN**          | Service Principal Name                  | Unique identifier for a service instance in the network                                      |
+| **AS Exchange**  | Authentication Service Exchange         | Initial Kerberos login step (user obtains TGT)                                               |
+| **TGS Exchange** | Ticket Granting Service Exchange        | Step where user requests a service ticket from the KDC                                       |
+| **AP Exchange**  | Application Protocol Exchange           | Step where the user presents the service ticket to the target service                        |
+| **krbtgt**       | Kerberos Ticket Granting Ticket Account | Special account used by the KDC to encrypt/decrypt TGTs                                      |
+| **NTLM**         | NT LAN Manager                          | Microsoft’s legacy authentication protocol based on challenge-response                       |
+| **NetNTLM**      | Network NT LAN Manager                  | Network-based NTLM challenge-response mechanism                                              |
